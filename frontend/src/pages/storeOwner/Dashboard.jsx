@@ -18,10 +18,13 @@ function Dashboard() {
     <div style={{ padding: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <h2>Store Owner Dashboard</h2>
-        <button onClick={() => { logout(); navigate('/login') }}>Logout</button>
+        <div style={{ display: 'flex', gap: '10px' }}>
+    <button onClick={() => navigate('/owner/password')}>Update Password</button>
+    <button onClick={() => { logout(); navigate('/login') }}>Logout</button>
+  </div>
       </div>
 
-      {/* Store Stats */}
+  
       <h3>My Stores</h3>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
@@ -44,7 +47,7 @@ function Dashboard() {
         </tbody>
       </table>
 
-      {/* Rated Users */}
+    
       <h3>Users Who Rated</h3>
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>

@@ -45,7 +45,7 @@ function Users() {
         <button onClick={() => navigate('/admin/dashboard')}>Back</button>
       </div>
 
-      {/* Add User Form */}
+  
       <h3>Add User</h3>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleAddUser} style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -61,7 +61,7 @@ function Users() {
         <button type='submit'>Add</button>
       </form>
 
-      {/* Filters */}
+  
       <h3>Filter Users</h3>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         <input placeholder='Name' value={filters.name} onChange={e => setFilters({ ...filters, name: e.target.value })} />
@@ -76,7 +76,7 @@ function Users() {
         <button onClick={fetchUsers}>Search</button>
       </div>
 
-      {/* Users Table */}
+  
       <table style={{ width: '100%', marginTop: '20px', borderCollapse: 'collapse' }}>
         <thead>
           <tr style={{ background: '#f0f0f0' }}>

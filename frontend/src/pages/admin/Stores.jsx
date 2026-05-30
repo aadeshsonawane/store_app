@@ -45,7 +45,7 @@ function Stores() {
         <button onClick={() => navigate('/admin/dashboard')}>Back</button>
       </div>
 
-      {/* Add Store Form */}
+  
       <h3>Add Store</h3>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleAddStore} style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
@@ -56,7 +56,7 @@ function Stores() {
         <button type='submit'>Add</button>
       </form>
 
-      {/* Filters */}
+  
       <h3>Filter Stores</h3>
       <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
         <input placeholder='Name' value={filters.name} onChange={e => setFilters({ ...filters, name: e.target.value })} />
@@ -65,7 +65,7 @@ function Stores() {
         <button onClick={fetchStores}>Search</button>
       </div>
 
-      {/* Stores Table */}
+    
       <table style={{ width: '100%', marginTop: '20px', borderCollapse: 'collapse' }}>
         <thead>
           <tr style={{ background: '#f0f0f0' }}>
