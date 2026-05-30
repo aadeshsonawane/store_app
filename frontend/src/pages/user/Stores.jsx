@@ -29,19 +29,22 @@ function Stores() {
     <div style={{ padding: '20px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
         <h2>All Stores</h2>
-        <button onClick={() => { logout(); navigate('/login') }}>Logout</button>
+        <div style={{ display: 'flex', gap: '10px' }}>
+    <button onClick={() => navigate('/user/password')}>Update Password</button>
+    <button onClick={() => { logout(); navigate('/login') }}>Logout</button>
+  </div>
       </div>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
 
-      {/* Filters */}
+    
       <div style={{ display: 'flex', gap: '10px', margin: '20px 0' }}>
         <input placeholder='Search by Name' value={filters.name} onChange={e => setFilters({ ...filters, name: e.target.value })} />
         <input placeholder='Search by Address' value={filters.address} onChange={e => setFilters({ ...filters, address: e.target.value })} />
         <button onClick={fetchStores}>Search</button>
       </div>
 
-      {/* Stores Table */}
+    
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr style={{ background: '#f0f0f0' }}>
