@@ -1,5 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { useAuth } from './context/AuthContext'
+ import 'bootstrap/dist/css/bootstrap.css';
+   import "bootstrap/dist/js/bootstrap.bundle.min.js";
+  //  import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'

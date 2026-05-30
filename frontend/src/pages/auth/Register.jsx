@@ -13,7 +13,7 @@ function Register() {
   }
 
   const validate = () => {
-    if (form.name.length < 20 || form.name.length > 60) return 'Name must be 20-60 characters'
+    if (form.name.length < 10 || form.name.length > 30) return 'Name must be 20-60 characters'
     if (form.address.length > 400) return 'Address max 400 characters'
     if (!/^(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,16}$/.test(form.password)) return 'Password: 8-16 chars, 1 uppercase, 1 special character'
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return 'Invalid email'
