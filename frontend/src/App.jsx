@@ -3,6 +3,7 @@ import { useAuth } from './context/AuthContext'
  import 'bootstrap/dist/css/bootstrap.css';
    import "bootstrap/dist/js/bootstrap.bundle.min.js";
   //  import 'bootstrap-icons/font/bootstrap-icons.css';
+  import AdminUserDetail from './pages/admin/UserDetail'
 
 import Login from './pages/auth/Login'
 import Register from './pages/auth/Register'
@@ -31,6 +32,7 @@ function App() {
       <Route path='/admin/dashboard' element={<ProtectedRoute role='admin'><AdminDashboard /></ProtectedRoute>} />
       <Route path='/admin/users' element={<ProtectedRoute role='admin'><AdminUsers /></ProtectedRoute>} />
       <Route path='/admin/stores' element={<ProtectedRoute role='admin'><AdminStores /></ProtectedRoute>} />
+      <Route path='/admin/users/:id' element={<ProtectedRoute role='admin'><AdminUserDetail /></ProtectedRoute>} />
 
       <Route path='/stores' element={<ProtectedRoute role='user'><UserStores /></ProtectedRoute>} />
       <Route path='/owner/dashboard' element={<ProtectedRoute role='store_owner'><OwnerDashboard /></ProtectedRoute>} />
